@@ -1,8 +1,9 @@
-Dev Software
+win 10 SW
 
-1 : Altera 13.1.0.162
->> MaxPlus II and FLEX ??
+Quartus II Web Edition (Free) 13.1.0.162
+Xilinx Design Tools Vivado ML Standard 2024.1
 
-2: Vivado 2024.1  
->> Latest
->> Spartan 7 support ??
+ModelSim
+--------
+Intel FPGA Starter Edition 20.1.1.720
+Altera Starter Edition 13.1.0.162
