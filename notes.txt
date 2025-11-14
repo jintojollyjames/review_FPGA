@@ -20,3 +20,38 @@ The process of sharing a resource is called #arbitration, and the component that
 Arbiters can be built to share off-FPGA resources as well.
 
 -.-
+
+Non-Synthesizable code
+  The tool will move forward with synthesis process, omitting the non-synthesizable parts from the final design.
+
+synthesis translate_off
+
+"sim" code
+
+synthesis translate_on
+
+
+
+
+common areas where non-synthesizable code arises:
+* keeping track of time: now, wait for, ...
+* printing text: assert, $display (verilog), ...
+* working with files: file_open(), write(), ...
+* looping
+
+
+
+--
+Synthesis: Compilation, elaboration, logic minimization, translation
+
+--
+
+Place and route:
+
+Place and route is the process of taking your synthesized design and mapping it to physical locations on your specific FPGA.
+
+Place and route: 2 processes
+
+place: placement of synthesized design into your FPGA
+routing: routing of that design using physical wires to connect everything together.
+
