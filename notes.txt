@@ -47,6 +47,7 @@ Synthesis: Compilation, elaboration, logic minimization, translation
 --
 
 Place and route:
+----------------
 
 Place and route is the process of taking your synthesized design and mapping it to physical locations on your specific FPGA.
 
@@ -55,3 +56,8 @@ Place and route: 2 processes
 place: placement of synthesized design into your FPGA
 routing: routing of that design using physical wires to connect everything together.
 
+To run the place and route process, you need to constrain at least 2 aspects of your design: the pins and the clocks. {addln: Input/ output delays, specific routing, ...}
+
+The pin contraints tells the place and route tool which signals in the VHDL (or Verilog) code are mapped to which physical pins on the FPGA.
+The clock constraints tell the tool about the clock frequency (or frequencies) used to drive your FPGA.
+  If everything is sure to works under the specified clock contraints, the design is said to meet timing, and the report will show this.
