@@ -1,0 +1,22 @@
+Synthesis
+---------
+
+  Synthesis is the process of breaking down your VHDL (or Verilog) code and converting it to simple components (LUTs, flip-flops, block RAMs and so on) that exists on your specific FPGA.
+In this sense, an FPGA synthesis tool is similar to a compiler, which takes code ina language like C and breaks it down into very simple instructions that your cpu can understand.
+
+A key output of synthesis process is your utilization report, which tells you how many {FPGA resources: LUTs, flip-flops, block RAMs and other resources} you're using in your design.
+
+errors after synthesis:
+(1) Syntax errors
+(2) Utilization error:
+    where your design requires more components than the FPGA has available.
+        (a) Switch to a larger FPGA
+        (b) Identify the most resource-intensive modules and rewrite them.
+        (c) Remove functionality.
+b:(i) rewriting the code with a focus on lower reesource utilization.
+  (ii) have different inputs (or channels) share the same FPGA resource. [only works if you have time available to share a resource.]
+
+The process of sharing a resource is called #arbitration, and the component that performs sharing is often referred to as an #arbiter.
+Arbiters can be built to share off-FPGA resources as well.
+
+-.-
