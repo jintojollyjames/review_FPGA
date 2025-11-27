@@ -6,6 +6,8 @@ FPGA: field programmable gate array is a highly capable type of integrated circu
 
 FPGAs are a good candidate for any digital electronics problem where high bandwidth, low latency, or high processing capability is needed.
 
+An FPGA is like a blank slate that can be programmed to do almost anything, 
+providing you with tremendous flexibility to tackle a wide range of digital logic problems.
 
 
 Synthesis
