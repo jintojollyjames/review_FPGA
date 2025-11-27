@@ -10,6 +10,22 @@ An FPGA is like a blank slate that can be programmed to do almost anything,
 providing you with tremendous flexibility to tackle a wide range of digital logic problems.
 
 
+
+--*--
+Comparing an FPGA vs. a Microcontroller vs. an ASIC
+
+                                FPGA               Microcontroller           ASIC
+Cost (low quantities)           Moderate           Cheap                     Expensive
+Cost (high quantities)          Moderate           Cheap                     Cheap
+Speed                           Fast               Moderate                  Fast+
+Power                           Moderate           Low                       Low
+Flexibility                     High               Low                       None
+Ease of use                     Medium             Easy                      Difficult
+
+
+--*--
+
+
 Synthesis
 ---------
 
