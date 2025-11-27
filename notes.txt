@@ -1,3 +1,12 @@
+FPGA: field programmable gate array is a highly capable type of integrated circuit, an electronics cicruit in a signle package.
+          The field programmable part of the name indicates that FPGAs can be reprogrammed when in the field (that is, without having to 
+          return them to the manufacturer).
+          The gate array part indicates that an FPGA is made up of a two-dimensional grid featuring a large number of gates (fundamental 
+          units of digital logic)
+
+
+
+
 Synthesis
 ---------
 
