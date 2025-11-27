@@ -23,6 +23,9 @@ Flexibility                     High               Low                       Non
 Ease of use                     Medium             Easy                      Difficult
 
 
+The act of examining multiple possibilities and selecting a technical solution is often
+referred to in engineering as a trade study.
+
 --*--
 
 
