@@ -4,6 +4,18 @@ The very first FPGA was the XC2064, created by Xilinx in 1985. It was very primi
 When FPGAs came along, a single device could replace many discrete gate components, lowering costs, saving component space on the circuit board, 
 and allowing the design to be reprogrammed as the requirements of the project changed.
 
+--*--
 
-Intel’s 2015 acquisition of Altera
-In 2020, the chip-making company AMD purchased Xilinx 
+FPGA Companies:
+
+*Intel: Intel’s 2015 acquisition of Altera
+*AMD: In 2020, the chip-making company AMD purchased Xilinx 
+
+*Microchip Trchnology:
+Actel, was acquired by Microsemi in 2010.
+Microsemi itself was acquired by Microchip Technology in 2018.
+
+*Lattice Semiconductor has done well for itself making mostly smaller, less expensive FPGAs.
+
+--*--
+
