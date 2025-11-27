@@ -4,6 +4,7 @@ FPGA: field programmable gate array is a highly capable type of integrated circu
           The gate array part indicates that an FPGA is made up of a two-dimensional grid featuring a large number of gates (fundamental 
           units of digital logic)
 
+FPGAs are a good candidate for any digital electronics problem where high bandwidth, low latency, or high processing capability is needed.
 
 
 
