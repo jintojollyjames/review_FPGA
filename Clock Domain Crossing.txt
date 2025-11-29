@@ -1,0 +1,58 @@
+FPGA Clock Domain Crossing (CDC)
+================================
+
+Clock Domain Crossing (CDC) in FPGA design refers to transferring signals or data between two clock domains operating at different frequencies or phases. 
+This process is critical in FPGA designs to avoid metastability and timing errors, which can lead to unpredictable behavior.
+
+Challenges in CDC
+-----------------
+When signals cross clock domains, setup and hold time violations can occur, leading to metastability. 
+Metastability is a temporary unstable state in flip-flops, which can propagate errors through the design. 
+Proper techniques are required to mitigate these issues.
+
+Techniques for CDC
+==================
+
+Single Signal Transfer
+---===================
+
+Double-flop synchronization
+---------------------------
+For transferring individual signals between clock domains, the double-flop synchronization method is commonly used. 
+This involves passing the signal through two flip-flops in the destination clock domain. 
+The first flip-flop may experience metastability, but the second ensures a stable output.
+
+Example in Verilog:
+  always @(posedge i_Fast_Clock) begin
+  r1_Data <= i_Slow_Data; // Metastable
+  r2_Data <= r1_Data; // Stable
+  end
+
+Pulse Stretching
+----------------
+When transferring pulses from a faster clock domain to a slower one, 
+the pulse must be stretched to ensure it is sampled correctly. 
+The pulse duration should be extended to at least two cycles of the slower clock to meet setup and hold requirements.
+
+FIFO for Bulk Data Transfer
+---========================
+For transferring large amounts of data, a FIFO (First-In-First-Out) buffer is the most reliable method. 
+A dual-clock FIFO allows independent read and write operations in different clock domains. Key considerations include:
+
+* Almost Full (AF) and Almost Empty (AE) Flags: These flags help manage data flow without relying on Full or Empty signals, which can be less reliable.
+* Timing Constraints: Proper constraints must be applied to inform the FPGA tools about the CDC, ensuring metastability is handled correctly.
+
+Timing Constraints
+------------------
+FPGA tools often flag timing errors during CDC. These errors indicate potential metastability. 
+Designers must create timing exceptions (e.g., set_false_path) to relax constraints for CDC paths, signaling that the design accounts for metastability.
+
+Best Practices
+---===========
+* Avoid mixing signals from different clock domains in the same logic.
+* Use double-flopping for single-bit signals and FIFOs for multi-bit data.
+* Stretch pulses when transferring from fast to slow clock domains.
+* Apply proper timing constraints to avoid unnecessary tool warnings.
+
+Understanding and implementing these techniques ensures reliable communication between clock domains in FPGA designs.
+
