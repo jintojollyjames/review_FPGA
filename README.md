@@ -1,2 +1,2 @@
-# Oct2024_FPGA
+# review_FPGA
 review topics on FPGA based dev
